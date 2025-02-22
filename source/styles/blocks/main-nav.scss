@@ -1,0 +1,8 @@
+.main-nav {
+  display: flex;
+}
+
+.main-nav__list {
+  @include reset;
+  display: flex;
+}

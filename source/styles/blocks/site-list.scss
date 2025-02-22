@@ -1,0 +1,8 @@
+.site-list__item:not(:first-child) {
+  margin-left: 35px;
+}
+
+.site-list__link {
+  text-decoration: none;
+  color: $primary-color;
+}

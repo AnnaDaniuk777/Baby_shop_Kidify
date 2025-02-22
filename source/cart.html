@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Styling Children for Formal Events and Casual.">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/192.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Baby shop "Kidify"</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <a class="header__logo logo" href="index.html">
+        <picture>
+          <img class="logo__img" src="../images/logo-icon.svg" width="107" height="37" alt="Kidify logo image">
+        </picture>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="about.html">
+              About
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">
+              Shop
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="pages.html">
+              Pages
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="blog.html">
+              Blog
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="contact.html">
+              Contact
+            </a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link--search" href="#">
+              <span class="visually-hidden">Search</span>
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link--login" href="#">
+              <span class="visually-hidden">Login</span>
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link--favourites" href="#">
+              <span class="visually-hidden">Favourites</span>
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link--cart" href="cart.html">
+              <span class="visually-hidden">Cart</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="cart">
+    <section class="cart__catalog">
+      <div class="cart__container container">
+        <h1 class="cart__title">Shop Cart</h1>
+        <ul class="cart__pagination pagination">
+          <li class="pagination__item">
+            <a class="pagination__link" href="index.html">Home</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="catalog.html">Shop</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link pagination__item--active" href="cart.html">Cart</a>
+          </li>
+        </ul>
+      </div>
+      <div class="cart__cataloog-wrapper">
+        <ul class="cart__features">
+          <li class="cart__features-item">Product</li>
+          <li class="cart__features-item">Size</li>
+          <li class="cart__features-item">Unit Price</li>
+          <li class="cart__features-item">Quantity</li>
+          <li class="cart__features-item">Subtotal</li>
+          <li class="cart__features-item">Remove</li>
+        </ul>
+        <ul class="cart__card card">
+          <li class="card__item">
+            <a class="card__link" href="#">
+              <img class="card__img" src="#" width="89" height="89" alt="Chevron Long Dress">
+              <h2 class="card__title">Chevron Long Dress</h2>
+            </a>
+            <p class="card__size">XL</p>
+            <p class="card__feature">$18.50</p>
+            <div class="card__button-wrapper">
+              <button class="card__button-input" type="button"><span class="visually-hidden">Decrease quantity</span></button>
+              <label class="visually-hidden" for="quantity-one">Quantity</label>
+              <input class="card__input-quantity" id="quantity-one" type="number" name="quantity" value="2" min="1" required>
+              <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span></button>
+            </div>
+            <p class="card__subtotal">$37.0</p>
+            <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span></button>
+          </li>
+          <li class="card__item">
+            <a class="card__link" href="#">
+              <img class="card__img" src="#" width="89" height="89" alt="Chevron Long Dress">
+              <h2 class="card__title">Chevron Long Dress</h2>
+            </a>
+            <p class="card__size">XL</p>
+            <p class="card__feature">$84.50</p>
+            <div class="card__button-wrapper">
+              <button class="card__button-input" type="button"><span class="visually-hidden">Decrease quantity</span></button>
+              <label class="visually-hidden" for="quantity-two">Quantity</label>
+              <input class="card__input-quantity" type="number" id="quantity-two" name="quantity" value="1" min="1" required>
+              <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span></button>
+            </div>
+            <p class="card__subtotal">$84.50</p>
+            <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span></button>
+          </li>
+          <li class="card__item">
+            <a class="card__link" href="#">
+              <img class="card__img" src="#" width="89" height="89" alt="Chevron Long Dress">
+              <h2 class="card__title">Chevron Long Dress</h2>
+            </a>
+            <p class="card__size">XL</p>
+            <p class="card__feature">$25.36</p>
+            <div class="card__button-wrapper">
+              <button class="card__button-input" type="button"><span class="visually-hidden">Decrease quantity</span></button>
+              <label class="visually-hidden" for="quantity-three">Quantity</label>
+              <input class="card__input-quantity" id="quantity-three" type="number" name="quantity" value="1" min="1" required>
+              <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span></button>
+            </div>
+            <p class="card__subtotal">$25.36</p>
+            <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span></button>
+          </li>
+          <li class="card__item">
+            <a class="card__link" href="#">
+              <img class="card__img" src="#" width="89" height="89" alt="Chevron Long Dress">
+              <h2 class="card__title">Chevron Long Dress</h2>
+            </a>
+            <p class="card__size">XL</p>
+            <p class="card__feature">$35.62</p>
+            <div class="card__button-wrapper">
+              <button class="card__button-input" type="button"><span class="visually-hidden">Decrease quantity</span></button>
+              <label class="visually-hidden" for="quantity-four">Quantity</label>
+              <input class="card__input-quantity" id="quantity-four" type="number" name="quantity" value="1" min="1" required>
+              <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span></button>
+            </div>
+            <p class="card__subtotal">$35.62</p>
+            <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span></button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

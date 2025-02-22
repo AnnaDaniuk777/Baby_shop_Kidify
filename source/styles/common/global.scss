@@ -7,9 +7,8 @@
 body {
   @include body-flex;
   font-family: $font-primary;
-  min-width: 320px;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 400;
   color: $primary-color;
   background-color: $basic-background;
