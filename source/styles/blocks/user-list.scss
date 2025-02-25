@@ -1,15 +1,20 @@
-.user-list__link {
-  text-decoration: none;
-  background-color: $primary-color;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  min-width: 28px;
-  min-height: 28px;
-  display: block;
-  mask-repeat: no repeat;
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
-.user-list__link--search {
-  mask-image: url();
-  mask-size: 20px 20px;
+.user-list__link {
+  width: 28px;
+  height: 28px;
+  display: block;
+  position: relative;
+}
+
+.user-list__icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

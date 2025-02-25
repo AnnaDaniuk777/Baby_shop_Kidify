@@ -57,22 +57,34 @@
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__link user-list__link--search" href="#">
+            <a class="user-list__link" href="#">
+              <svg class="user-list__icon" width="20" height="20">
+                <use href="icons/stack.svg#search-icon"></use>
+              </svg>
               <span class="visually-hidden">Search</span>
             </a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link user-list__link--login" href="#">
+            <a class="user-list__link" href="#">
+              <svg class="user-list__icon" width="20" height="20">
+                <use href="icons/stack.svg#login-icon"></use>
+              </svg>
               <span class="visually-hidden">Login</span>
             </a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link user-list__link--favourites" href="#">
+            <a class="user-list__link" href="#">
+              <svg class="user-list__icon" width="20" height="20">
+                <use href="icons/stack.svg#favourite-icon"></use>
+              </svg>
               <span class="visually-hidden">Favourites</span>
             </a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link user-list__link--cart" href="cart.html">
+            <a class="user-list__link" href="cart.html">
+              <svg class="user-list__icon" width="20" height="20">
+                <use href="icons/stack.svg#cart-icon"></use>
+              </svg>
               <span class="visually-hidden">Cart</span>
             </a>
           </li>
@@ -84,7 +96,7 @@
     <section class="cart__catalog">
       <div class="cart__container container">
         <h1 class="cart__title">Shop Cart</h1>
-        <ul class="cart__pagination pagination">
+        <ol class="cart__pagination pagination">
           <li class="pagination__item">
             <a class="pagination__link" href="index.html">Home</a>
           </li>
@@ -92,9 +104,9 @@
             <a class="pagination__link" href="catalog.html">Shop</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link pagination__item--active" href="cart.html">Cart</a>
+            <a class="pagination__link pagination__link--active" href="cart.html">Cart</a>
           </li>
-        </ul>
+        </ol>
       </div>
       <div class="cart__cataloog-wrapper">
         <ul class="cart__features">

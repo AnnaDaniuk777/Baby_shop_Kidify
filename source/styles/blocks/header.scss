@@ -1,0 +1,19 @@
+.header {
+  margin-bottom: 23px;
+
+  .header__container {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  text-decoration: none;
+}

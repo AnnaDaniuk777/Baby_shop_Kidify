@@ -5,9 +5,9 @@
 @import "./common/global.scss";
 
 /* BLOCKS */
-@import "./blocks/header__container.scss";
-// @import "./blocks/additional-products.scss";
-// @import "./blocks/address.scss";
+@import "./blocks/header.scss";
+@import "./blocks/cart.scss";
+@import "./blocks/pagination.scss";
 // @import "./blocks/benefit-item.scss";
 // @import "./blocks/benefits.scss";
 // @import "./blocks/button.scss";

@@ -1,5 +1,7 @@
-.site-list__item:not(:first-child) {
-  margin-left: 35px;
+.site-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 35px;
 }
 
 .site-list__link {

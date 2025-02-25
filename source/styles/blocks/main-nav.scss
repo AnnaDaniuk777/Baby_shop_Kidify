@@ -1,8 +1,9 @@
 .main-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 280px;
 }
 
 .main-nav__list {
   @include reset;
-  display: flex;
 }

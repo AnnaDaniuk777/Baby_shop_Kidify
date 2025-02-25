@@ -1,0 +1,36 @@
+.pagination {
+  @include reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  max-width: 173px;
+  margin: 0 auto;
+}
+
+.pagination__item {
+  position: relative;
+  display: block;
+}
+
+.pagination__item::after {
+  @include pseudo;
+  width: 5px;
+  height: 12px;
+  background-image: url("build/icons/stack.svg#pagination-arrow");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+}
+
+.pagination__link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: $secondary-color;
+
+  &--active {
+    color: #808385;
+  }
+}
