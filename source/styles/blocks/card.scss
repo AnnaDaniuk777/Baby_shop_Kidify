@@ -1,0 +1,100 @@
+.card {
+  @include reset;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__item {
+  display: grid;
+  grid-template-columns: 355px 157px 302px 194px 212px 88px;
+  gap: 10px;
+  padding: 35px 43px 34px 67px;
+  align-items: center;
+
+  &:nth-child(even) {
+    background-color: $additional-background;
+  }
+}
+
+.card__link {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  align-items: center;
+}
+
+.card__img {
+  display: block;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.card__size {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.card__feature {
+  margin: 0;
+  color: $secondary-color;
+}
+
+.card__button-wrapper {
+  display: flex;
+  max-width: 136px;
+  border: 1px solid $extra-background;
+  border-radius: 4px;
+}
+
+.card__button-input {
+  width: 45px;
+  border: none;
+  padding: 0;
+  position: relative;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.card__svg-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__input-quantity {
+  width: 45px;
+  height: 48px;
+  border: none;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 700;
+  text-align: center;
+  background-color: inherit;
+}
+
+.card__delete-button {
+  border: none;
+  background-color: inherit;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__subtotal {
+  color: $secondary-color;
+  margin: 0;
+}

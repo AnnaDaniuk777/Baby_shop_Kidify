@@ -95,94 +95,148 @@
   <main class="cart">
     <section class="cart__catalog">
       <div class="cart__container container">
-        <h1 class="cart__title">Shop Cart</h1>
-        <ol class="cart__pagination pagination">
-          <li class="pagination__item">
-            <a class="pagination__link" href="index.html">Home</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="catalog.html">Shop</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link pagination__link--active" href="cart.html">Cart</a>
-          </li>
-        </ol>
-      </div>
-      <div class="cart__cataloog-wrapper">
-        <ul class="cart__features">
-          <li class="cart__features-item">Product</li>
-          <li class="cart__features-item">Size</li>
-          <li class="cart__features-item">Unit Price</li>
-          <li class="cart__features-item">Quantity</li>
-          <li class="cart__features-item">Subtotal</li>
-          <li class="cart__features-item">Remove</li>
-        </ul>
-        <ul class="cart__card card">
-          <li class="card__item">
-            <a class="card__link" href="#">
-              <img class="card__img" src="#" width="89" height="89" alt="Chevron Long Dress">
-              <h2 class="card__title">Chevron Long Dress</h2>
-            </a>
-            <p class="card__size">XL</p>
-            <p class="card__feature">$18.50</p>
-            <div class="card__button-wrapper">
-              <button class="card__button-input" type="button"><span class="visually-hidden">Decrease quantity</span></button>
-              <label class="visually-hidden" for="quantity-one">Quantity</label>
-              <input class="card__input-quantity" id="quantity-one" type="number" name="quantity" value="2" min="1" required>
-              <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span></button>
-            </div>
-            <p class="card__subtotal">$37.0</p>
-            <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span></button>
-          </li>
-          <li class="card__item">
-            <a class="card__link" href="#">
-              <img class="card__img" src="#" width="89" height="89" alt="Chevron Long Dress">
-              <h2 class="card__title">Chevron Long Dress</h2>
-            </a>
-            <p class="card__size">XL</p>
-            <p class="card__feature">$84.50</p>
-            <div class="card__button-wrapper">
-              <button class="card__button-input" type="button"><span class="visually-hidden">Decrease quantity</span></button>
-              <label class="visually-hidden" for="quantity-two">Quantity</label>
-              <input class="card__input-quantity" type="number" id="quantity-two" name="quantity" value="1" min="1" required>
-              <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span></button>
-            </div>
-            <p class="card__subtotal">$84.50</p>
-            <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span></button>
-          </li>
-          <li class="card__item">
-            <a class="card__link" href="#">
-              <img class="card__img" src="#" width="89" height="89" alt="Chevron Long Dress">
-              <h2 class="card__title">Chevron Long Dress</h2>
-            </a>
-            <p class="card__size">XL</p>
-            <p class="card__feature">$25.36</p>
-            <div class="card__button-wrapper">
-              <button class="card__button-input" type="button"><span class="visually-hidden">Decrease quantity</span></button>
-              <label class="visually-hidden" for="quantity-three">Quantity</label>
-              <input class="card__input-quantity" id="quantity-three" type="number" name="quantity" value="1" min="1" required>
-              <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span></button>
-            </div>
-            <p class="card__subtotal">$25.36</p>
-            <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span></button>
-          </li>
-          <li class="card__item">
-            <a class="card__link" href="#">
-              <img class="card__img" src="#" width="89" height="89" alt="Chevron Long Dress">
-              <h2 class="card__title">Chevron Long Dress</h2>
-            </a>
-            <p class="card__size">XL</p>
-            <p class="card__feature">$35.62</p>
-            <div class="card__button-wrapper">
-              <button class="card__button-input" type="button"><span class="visually-hidden">Decrease quantity</span></button>
-              <label class="visually-hidden" for="quantity-four">Quantity</label>
-              <input class="card__input-quantity" id="quantity-four" type="number" name="quantity" value="1" min="1" required>
-              <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span></button>
-            </div>
-            <p class="card__subtotal">$35.62</p>
-            <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span></button>
-          </li>
-        </ul>
+        <div class="cart__wrapper">
+          <h1 class="cart__title">Shop Cart</h1>
+          <ol class="cart__pagination pagination">
+            <li class="pagination__item">
+              <a class="pagination__link" href="index.html">Home</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="catalog.html">Shop</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--active" href="cart.html">Cart</a>
+            </li>
+          </ol>
+        </div>
+        <div class="cart__cataloog-wrapper">
+          <ul class="cart__features">
+            <li class="cart__features-item">Product</li>
+            <li class="cart__features-item">Size</li>
+            <li class="cart__features-item">Unit Price</li>
+            <li class="cart__features-item">Quantity</li>
+            <li class="cart__features-item">Subtotal</li>
+            <li class="cart__features-item">Remove</li>
+          </ul>
+          <ul class="cart__card card">
+            <li class="card__item">
+              <a class="card__link" href="#">
+                <img class="card__img" src="images/clothes-1@1x.jpg" srcset="images/clothes-1@2x.jpg 2x" width="89" height="89" alt="Chevron Long Dress">
+                <h2 class="card__title">Chevron Long Dress</h2>
+              </a>
+              <p class="card__size">XL</p>
+              <p class="card__feature">$18.50</p>
+              <div class="card__button-wrapper">
+                <button class="card__button-input" type="button">
+                  <span class="visually-hidden">Decrease quantity</span>
+                  <svg class="card__svg-icon" width="12" height="2">
+                    <use href="icons/stack.svg#arrow-minus"></use>
+                  </svg>
+                </button>
+                <label class="visually-hidden" for="quantity-one">Quantity</label>
+                <input class="card__input-quantity" id="quantity-one" type="number" name="quantity" value="2" min="1" required>
+                <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span>
+                  <svg class="card__svg-icon" width="12" height="12">
+                    <use href="icons/stack.svg#arrow-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <p class="card__subtotal">$37.00</p>
+              <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span>
+                <svg class="card__svg-icon" width="10" height="10">
+                  <use href="icons/stack.svg#delete-button-icon"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="card__item">
+              <a class="card__link" href="#">
+                <img class="card__img" src="images/clothes-2@1x.jpg" srcset="images/clothes-2@2x.jpg 2x" width="89" height="89" alt="Chevron Long Dress">
+                <h2 class="card__title">Chevron Long Dress</h2>
+              </a>
+              <p class="card__size">XL</p>
+              <p class="card__feature">$84.50</p>
+              <div class="card__button-wrapper">
+                <button class="card__button-input" type="button">
+                  <span class="visually-hidden">Decrease quantity</span>
+                  <svg class="card__svg-icon" width="12" height="2">
+                    <use href="icons/stack.svg#arrow-minus"></use>
+                  </svg>
+                </button>
+                <label class="visually-hidden" for="quantity-two">Quantity</label>
+                <input class="card__input-quantity" type="number" id="quantity-two" name="quantity" value="1" min="1" required>
+                <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span>
+                  <svg class="card__svg-icon" width="12" height="12">
+                    <use href="icons/stack.svg#arrow-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <p class="card__subtotal">$84.50</p>
+              <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span>
+                <svg class="card__svg-icon" width="10" height="10">
+                  <use href="icons/stack.svg#delete-button-icon"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="card__item">
+              <a class="card__link" href="#">
+                <img class="card__img" src="images/clothes-3@1x.jpg" srcset="images/clothes-3@2x.jpg 2x" width="89" height="89" alt="Chevron Long Dress">
+                <h2 class="card__title">Chevron Long Dress</h2>
+              </a>
+              <p class="card__size">XL</p>
+              <p class="card__feature">$25.36</p>
+              <div class="card__button-wrapper">
+                <button class="card__button-input" type="button">
+                  <span class="visually-hidden">Decrease quantity</span>
+                  <svg class="card__svg-icon" width="12" height="2">
+                    <use href="icons/stack.svg#arrow-minus"></use>
+                  </svg>
+                </button>
+                <label class="visually-hidden" for="quantity-three">Quantity</label>
+                <input class="card__input-quantity" id="quantity-three" type="number" name="quantity" value="1" min="1" required>
+                <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span>
+                  <svg class="card__svg-icon" width="12" height="12">
+                    <use href="icons/stack.svg#arrow-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <p class="card__subtotal">$25.36</p>
+              <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span>
+                <svg class="card__svg-icon" width="10" height="10">
+                  <use href="icons/stack.svg#delete-button-icon"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="card__item">
+              <a class="card__link" href="#">
+                <img class="card__img" src="images/clothes-4@1x.jpg" srcset="images/clothes-4@2x.jpg 2x" width="89" height="89" alt="Chevron Long Dress">
+                <h2 class="card__title">Chevron Long Dress</h2>
+              </a>
+              <p class="card__size">XL</p>
+              <p class="card__feature">$35.62</p>
+              <div class="card__button-wrapper">
+                <button class="card__button-input" type="button">
+                  <span class="visually-hidden">Decrease quantity</span>
+                  <svg class="card__svg-icon" width="12" height="2">
+                    <use href="icons/stack.svg#arrow-minus"></use>
+                  </svg>
+                </button>
+                <label class="visually-hidden" for="quantity-four">Quantity</label>
+                <input class="card__input-quantity" id="quantity-four" type="number" name="quantity" value="1" min="1" required>
+                <button class="card__button-input" type="button"><span class="visually-hidden">Increase quantity</span>
+                  <svg class="card__svg-icon" width="12" height="12">
+                    <use href="icons/stack.svg#arrow-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <p class="card__subtotal">$35.62</p>
+              <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span>
+                <svg class="card__svg-icon" width="10" height="10">
+                  <use href="icons/stack.svg#delete-button-icon"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
