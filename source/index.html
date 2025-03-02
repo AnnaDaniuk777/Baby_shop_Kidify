@@ -109,7 +109,7 @@
             </li>
           </ol>
         </div>
-        <div class="cart__cataloog-wrapper">
+        <div class="cart__catalog-wrapper">
           <ul class="cart__features">
             <li class="cart__features-item">Product</li>
             <li class="cart__features-item">Size</li>
@@ -229,7 +229,7 @@
                 </button>
               </div>
               <p class="card__subtotal">$35.62</p>
-              <button class="card__delete-button" type="button"><span class="visually-hidden">Delete</span>
+              <button class="card__delete-button button" type="button"><span class="visually-hidden">Delete</span>
                 <svg class="card__svg-icon" width="10" height="10">
                   <use href="icons/stack.svg#delete-button-icon"></use>
                 </svg>
@@ -237,9 +237,106 @@
             </li>
           </ul>
         </div>
+        <form class="cart__discount" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="cart__feature-form">
+            <div class="cart__shipping-wrapper">
+              <div class="cart__discount-wrapper">
+                <label class="visually-hidden" for="discount">Discount Code</label>
+                <input class="cart__discount-input" id="discount" name="discount" type="text" placeholder="Discount Code">
+                <button class="cart__form-button button" type="submit">Apply</button>
+              </div>
+              <div class="cart__shipping-details shipping">
+                <h2 class="shipping__title">Calculate Shipping</h2>
+                <p class="shipping__text">Flat rate: 5%</p>
+                <select class="shipping__select" name="country" aria-label="Sorting">
+                  <option value="USA" selected>USA</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Australia">Australia</option>
+                  <option value="New Zealand">New Zealand</option>
+                  <option value="Germany">Germany</option>
+                </select>
+                <div class="shipping__container">
+                  <label class="visually-hidden" for="country">Stage / Country</label>
+                  <input class="shipping__discount-input" id="country" name="country" type="text" placeholder="Stage / Country" required>
+                  <label class="visually-hidden" for="code">PostCode / ZIP</label>
+                  <input class="shipping__discount-input" id="code" name="code" type="text" placeholder="PostCode / ZIP" required>
+                </div>
+              </div>
+            </div>
+            <div class="cart__total total">
+              <ol class="total__list">
+                <li class="total__item">
+                  <p class="total__name">Subtotal</p>
+                  <p class="total__value">$2.51</p>
+                </li>
+                <li class="total__item">
+                  <p class="total__name">Shipping</p>
+                  <p class="total__value">Free</p>
+                </li>
+                <li class="total__item">
+                  <p class="total__name">Estimate for</p>
+                  <p class="total__value">United Kingdom</p>
+                </li>
+                <li class="total__item">
+                  <p class="total__name">Total</p>
+                  <p class="total__value">$2.51</p>
+                </li>
+              </ol>
+              <button class="total__button button" type="submit">Proceed To CheckOut</button>
+            </div>
+            <div class="cart__buttons-wrapper">
+              <a class="cart__link-button button" href="#">Continue Shopping</a>
+              <button class="cart__update-button button" type="button">Update Cart</button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
+    <section class="cart__slider slider">
+      <h2 class="visually-hidden">Our models</h2>
+      <ul class="slider__list">
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-1@1x.jpg" srcset="images/slider-1@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-2@1x.jpg" srcset="images/slider-2@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-3@1x.jpg" srcset="images/slider-3@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-4@1x.jpg" srcset="images/slider-4@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-5@1x.jpg" srcset="images/slider-5@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-6@1x.jpg" srcset="images/slider-6@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+      </ul>
+      <ul class="slider__list">
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-1@1x.jpg" srcset="images/slider-1@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-2@1x.jpg" srcset="images/slider-2@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-3@1x.jpg" srcset="images/slider-3@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-4@1x.jpg" srcset="images/slider-4@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-5@1x.jpg" srcset="images/slider-5@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="images/slider-6@1x.jpg" srcset="images/slider-6@2x.jpg 2x" width="362" height="362" alt="A boy and a girl show off fall'25 collection">
+        </li>
+      </ul>
+    </section>
   </main>
+  <script src="slider.js"></script>
 </body>
 
 </html>

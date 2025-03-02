@@ -1,0 +1,42 @@
+.total {
+  width: 430px;
+  padding: 23px 20px 35px 18px;
+  border: 1px solid $extra-background;
+  border-radius: 4px;
+  margin-right: 94px;
+}
+
+.total__list {
+  @include reset;
+  margin-bottom: 21px;
+}
+
+.total__item {
+  @include flex-between;
+  font-size: 14px;
+  line-height: 21px;
+
+  &:not(:last-child) {
+    padding-bottom: 7px;
+    border-bottom: 1px solid $extra-background;
+    margin-bottom: 8px;
+  }
+}
+
+.total__button {
+  width: 100%;
+  background-color: $secondary-color;
+  color: $basic-background;
+  border-radius: 4px;
+}
+
+.total__name {
+  margin: 0;
+}
+
+.total__value {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+}
