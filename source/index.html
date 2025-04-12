@@ -17,12 +17,12 @@
 <body>
   <header class="header">
     <div class="header__container container">
-      <a class="header__logo logo" href="index.html">
-        <picture>
-          <img class="logo__img" src="../images/logo-icon.svg" width="107" height="37" alt="Kidify logo image">
-        </picture>
-      </a>
       <nav class="main-nav">
+        <a class="header__logo logo" href="index.html">
+          <picture>
+            <img class="logo__img" src="../images/logo-icon.svg" width="107" height="37" alt="Kidify logo image">
+          </picture>
+        </a>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">
@@ -78,6 +78,7 @@
                 <use href="icons/stack.svg#favourite-icon"></use>
               </svg>
               <span class="visually-hidden">Favourites</span>
+              <span class="user-list__number">2</span>
             </a>
           </li>
           <li class="user-list__item">
@@ -86,6 +87,7 @@
                 <use href="icons/stack.svg#cart-icon"></use>
               </svg>
               <span class="visually-hidden">Cart</span>
+              <span class="user-list__number">5</span>
             </a>
           </li>
         </ul>
@@ -111,6 +113,11 @@
         </div>
         <div class="cart__catalog-wrapper">
           <ul class="cart__features">
+            <li class="cart__features-checkbox">
+              <label class="cart__features-control cart__control">
+                <input class="cart__features-input cart__input" type="checkbox" name="check_all">
+              </label>
+            </li>
             <li class="cart__features-item">Product</li>
             <li class="cart__features-item">Size</li>
             <li class="cart__features-item">Unit Price</li>
@@ -120,6 +127,9 @@
           </ul>
           <ul class="cart__card card">
             <li class="card__item">
+              <label class="cart__item-control cart__control">
+                <input class="cart__item-input cart__input" type="checkbox" name="check">
+              </label>
               <a class="card__link" href="#">
                 <img class="card__img" src="images/clothes-1@1x.jpg" srcset="images/clothes-1@2x.jpg 2x" width="89" height="89" alt="Chevron Long Dress">
                 <h2 class="card__title">Chevron Long Dress</h2>
@@ -149,6 +159,9 @@
               </button>
             </li>
             <li class="card__item">
+              <label class="cart__item-control cart__control">
+                <input class="cart__item-input cart__input" type="checkbox" name="check">
+              </label>
               <a class="card__link" href="#">
                 <img class="card__img" src="images/clothes-2@1x.jpg" srcset="images/clothes-2@2x.jpg 2x" width="89" height="89" alt="Chevron Long Dress">
                 <h2 class="card__title">Chevron Long Dress</h2>
@@ -178,6 +191,9 @@
               </button>
             </li>
             <li class="card__item">
+              <label class="cart__item-control cart__control">
+                <input class="cart__item-input cart__input" type="checkbox" name="check">
+              </label>
               <a class="card__link" href="#">
                 <img class="card__img" src="images/clothes-3@1x.jpg" srcset="images/clothes-3@2x.jpg 2x" width="89" height="89" alt="Chevron Long Dress">
                 <h2 class="card__title">Chevron Long Dress</h2>
@@ -207,6 +223,9 @@
               </button>
             </li>
             <li class="card__item">
+              <label class="cart__item-control cart__control">
+                <input class="cart__item-input cart__input" type="checkbox" name="check">
+              </label>
               <a class="card__link" href="#">
                 <img class="card__img" src="images/clothes-4@1x.jpg" srcset="images/clothes-4@2x.jpg 2x" width="89" height="89" alt="Chevron Long Dress">
                 <h2 class="card__title">Chevron Long Dress</h2>
@@ -336,6 +355,136 @@
       </ul>
     </section>
   </main>
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer__navigation-wrapper contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Contact</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">Monday to Friday 8 a.m - 5 p.m</li>
+            <li class="contacts__item contacts__item--main">
+              <a class="contacts__link contacts__link--main" href="tel:+01456789">
+                <svg class="contacts__svg-icon" width="16" height="17">
+                  <use href="icons/stack.svg#footer-phone-icon"></use>
+                </svg>
+                <span class="contacts__text">+01 456 789</span>
+              </a>
+            </li>
+            <li class="contacts__item contacts__item--main">
+              <a class="contacts__link contacts__link--main" href="tel:+01567890">
+                <svg class="contacts__svg-icon" width="16" height="17">
+                  <use href="icons/stack.svg#footer-phone-icon"></use>
+                </svg>
+                <span class="contacts__text">+01 567 890</span>
+              </a>
+            </li>
+            <li class="contacts__item contacts__item--main">
+              <a class="contacts__link contacts__link--main" href="mailto:contact@kidify.com" target="_blank" rel="noreferrer noopener">
+                <svg class="contacts__svg-icon" width="24" height="17">
+                  <use href="icons/stack.svg#footer-email-icon"></use>
+                </svg>
+                <span class="contacts__text">contact@kidify.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Company</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">About Us</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Our Experts</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Services & Price</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Latest News</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Support Center</a></li>
+          </ul>
+        </div>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Customers</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Contact us</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Payment & Tax</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Bonus Point</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Supply Chain</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Student Discount</a></li>
+          </ul>
+        </div>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Support</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Shipping Info</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Returns</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">Refund</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">How To Order</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--info" href="#">How To Track</a></li>
+          </ul>
+        </div>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Social</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item"><a class="contacts__link contacts__link--facebook" href="#">Facebook</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--twitter" href="#">Twitter</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--instagram" href="#">Instagram</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--pinterest" href="#">Pinterest</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts__link--youtube" href="#">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__info">
+        <div class="footer__info-logo footer__logo">
+          <picture>
+            <img class="footer__logo logo__img" src="../images/logo-icon.svg" width="107" height="37" alt="Kidify logo image">
+          </picture>
+        </div>
+        <div class="footer__copyright">
+          <p class="footer__copyright-text">©2023 Kidify. All rights reserved</p>
+        </div>
+        <div class="footer__payment-methods payment">
+          <ul class="payment__list">
+            <li class="payment__item">
+              <span class="visually-hidden">MasterCard</span>
+              <a class="header__logo logo" href="#">
+                <picture>
+                  <img class="logo__img" src="../images/mastercard-icon.png" width="30" height="18" alt="MasterCard">
+                </picture>
+              </a>
+            </li>
+            <li class="payment__item">
+              <span class="visually-hidden">GooglePay</span>
+              <a class="header__logo logo" href="#">
+                <picture>
+                  <img class="logo__img" src="../images/googlepay-icon.png" width="33" height="14" alt="GooglePay">
+                </picture>
+              </a>
+            </li>
+            <li class="payment__item">
+              <span class="visually-hidden">Payoneer</span>
+              <a class="header__logo logo" href="#">
+                <picture>
+                  <img class="logo__img" src="../images/payoneer-icon.png" width="37" height="13" alt="Payoneer">
+                </picture>
+              </a>
+            </li>
+            <li class="payment__item">
+              <span class="visually-hidden">ApplePay</span>
+              <a class="header__logo logo" href="#">
+                <picture>
+                  <img class="logo__img" src="../images/applepay-icon.png" width="33" height="14" alt="ApplePay">
+                </picture>
+              </a>
+            </li>
+            <li class="payment__item">
+              <span class="visually-hidden">PayPal</span>
+              <a class="header__logo logo" href="#">
+                <picture>
+                  <img class="logo__img" src="../images/paypal-icon@1x.png" width="27" height="23" alt="PayPal">
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="slider.js"></script>
 </body>
 

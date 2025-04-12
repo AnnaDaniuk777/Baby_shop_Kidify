@@ -12,7 +12,7 @@
   display: block;
 }
 
-.pagination__item::after {
+.pagination__item:not(:last-child)::after {
   @include pseudo;
   width: 5px;
   height: 12px;
@@ -20,8 +20,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: -17px;
 }
 
 .pagination__link {
@@ -29,6 +29,7 @@
   font-size: 16px;
   line-height: 24px;
   color: $secondary-color;
+  display: inline-block;
 
   &--active {
     color: #808385;

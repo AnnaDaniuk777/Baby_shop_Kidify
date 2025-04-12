@@ -1,0 +1,12 @@
+.footer__navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 147px;
+  padding-bottom: 78px;
+  border-bottom: solid 1px $extra-background;
+}
+
+.footer__info {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}

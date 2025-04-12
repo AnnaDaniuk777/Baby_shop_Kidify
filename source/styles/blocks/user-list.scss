@@ -1,10 +1,12 @@
 .user-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 23px;
+  margin-right: 19px;
 }
 
 .user-list__link {
+  text-decoration: none;
   width: 28px;
   height: 28px;
   display: block;
@@ -17,4 +19,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.user-list__number {
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-background;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  padding: 1px 8px;
+  display: inline-block;
+  position: absolute;
+  top: -16px;
+  right: -21px;
 }

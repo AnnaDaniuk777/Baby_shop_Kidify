@@ -2,12 +2,13 @@
   overflow: hidden;
   white-space: nowrap;
   display: flex;
+  margin-bottom: 95px;
 }
 
 .slider__list {
   @include reset;
   display: flex;
-  animation: slideIn 10s infinite linear;
+  animation: slideIn 30s infinite linear;
 }
 
 @keyframes slideIn {
@@ -18,4 +19,8 @@
   to {
     transform: translateX(-100%);
   }
+}
+
+.slider__img {
+  display: block;
 }

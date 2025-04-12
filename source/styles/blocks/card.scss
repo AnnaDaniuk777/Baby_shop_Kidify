@@ -6,9 +6,9 @@
 
 .card__item {
   display: grid;
-  grid-template-columns: 355px 157px 302px 194px 212px 88px;
-  gap: 10px;
-  padding: 35px 43px 34px 67px;
+  grid-template-columns: 20px 384px 120px 220px 203px 198px 29px;
+  gap: 34px;
+  padding: 35px 38px 34px 17px;
   align-items: center;
 
   &:nth-child(even) {
@@ -21,6 +21,7 @@
   gap: 20px;
   text-decoration: none;
   align-items: center;
+  margin-left: -4px;
 }
 
 .card__img {
