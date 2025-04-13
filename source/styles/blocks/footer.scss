@@ -1,7 +1,4 @@
 .footer__navigation-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 147px;
   padding-bottom: 78px;
   border-bottom: solid 1px $extra-background;
 }
@@ -9,4 +6,24 @@
 .footer__info {
   padding-top: 23px;
   padding-bottom: 23px;
+  display: flex;
+  gap: 336px;
+}
+
+.footer__copyright-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  padding-top: 5px;
+}
+
+.footer__copyright-link {
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+.footer__logo {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 84px;
 }

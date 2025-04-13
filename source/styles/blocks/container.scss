@@ -14,3 +14,23 @@
     max-width: $desktop-width;
   }
 }
+
+/*
+.container {
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: $desktop-width;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: $tablet-width;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: $mobile-width;
+  }
+}
+  */
