@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <main class="category">
+    <h1>Боевой отряд</h1>
+    <div id="filters">
+      <label for="category__filter">Фильтр по классу:</label>
+      <select class="category__filter" name="hero__filter">
+        <option value="">Все</option>
+        <option value="mage">Маг</option>
+        <option value="archer">Лучник</option>
+        <option value="warrior">Воин</option>
+      </select>
+    </div>
+    <table class="hero-table" id="hero-table">
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Раса</th>
+          <th>Класс</th>
+          <th>Подтип</th>
+          <th>Уровень</th>
+          <th>Здоровье</th>
+          <th>Сила</th>
+          <th>Выносливость</th>
+          <th>Ловкость</th>
+          <th>Интеллект</th>
+          <th>Мана</th>
+          <th>Удача</th>
+          <th>Слава</th>
+          <th>Жив</th>
+        </tr>
+      </thead>
+      <tbody id="hero-table-body">
+        <!-- Герои будут вставлены сюда -->
+      </tbody>
+    </table>
+  </main>
+  <script src="./scripts/heroes.js"></script>
+</body>
+
+</html>
