@@ -1,36 +1,24 @@
 .container {
-  margin: 0 auto;
-  padding: 0 20px;
-  min-width: 320px;
+  padding-left: 40px;
+  padding-right: 40px;
+  min-width: $desktop-width;
 
-  @media (min-width: $tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+  @media (max-width: 1440px) {
+    max-width: 1440px;
+    min-width: 769px;
   }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: $desktop-width;
-  }
-}
-
-/*
-.container {
-  margin: 0 auto;
-  padding: 0 40px;
-  max-width: $desktop-width;
 
   @media (max-width: $tablet-width) {
     padding-left: 30px;
     padding-right: 30px;
     max-width: $tablet-width;
+    min-width: 426px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $mobile-width-only) {
     padding-left: 20px;
     padding-right: 20px;
-    max-width: $mobile-width;
+    max-width: $mobile-width-only;
+    min-width: 320px;
   }
 }
-  */

@@ -5,7 +5,7 @@ const mages = ['fire', 'ice', 'wind'];
 const archers = ['bow', 'crossbow'];
 const warriors = ['swordsman', 'assassin', 'spearman'];
 let sortedLevel = 1;
-const sortedHealth = 1;
+let sortedHealth = 1;
 let sortParameter = '';
 
 // Генерация случайного числа в заданном диапазоне
@@ -129,6 +129,7 @@ const generateBattleSquad = (heroesArray) => {
   const squadMage = heroesArray.filter((hero) => hero.category === 'mage');
   const squadArcher = heroesArray.filter((hero) => hero.category === 'archer');
   const squadWarrior = heroesArray.filter((hero) => hero.category === 'warrior');
+  //Отряд, котрый состоит из number существ
   const number = getRandomInteger(3, heroesArray.length);
 
   if (squadMage.length === 0 ?? squadArcher.length === 0 ?? squadWarrior.length === 0) {
@@ -139,6 +140,8 @@ const generateBattleSquad = (heroesArray) => {
 
   const newArray = [getRandomArrayItem(squadMage), getRandomArrayItem(squadArcher), getRandomArrayItem(squadWarrior)];
 
+
+  //Проверяем длину массива боевого отряда в соотношении к количеству(рандомному)
   while (newArray.length < number) {
     const lastHeroes = heroesArray.filter((hero) => !newArray.includes(hero));
     newArray.push(getRandomArrayItem(lastHeroes));
@@ -242,7 +245,7 @@ const sortByLevel = () => {
 
 const sortByHealth = () => {
   sortParameter = 'health';
-  sortedLevel *= -1;
+  sortedHealth *= -1;
   applyFilter();
 };
 

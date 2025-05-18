@@ -2,9 +2,45 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 35px;
+
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 55px 30px 108px 44px;
+    border-bottom: 1px solid #dbe2e5;
+  }
+}
+
+.site-list__item {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+  }
 }
 
 .site-list__link {
   text-decoration: none;
   color: $primary-color;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 15px;
+  }
+}
+
+.site-list__link::after {
+  @media (max-width: $mobile-width-only) {
+    content: "";
+    position: absolute;
+    background-image: url("../../icons/stack.svg#pagination-arrow");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 7px 11px;
+    width: 7px;
+    height: 11px;
+    top: 0;
+    right: 0;
+  }
 }

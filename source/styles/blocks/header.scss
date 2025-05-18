@@ -1,9 +1,31 @@
 .header {
   margin-bottom: 20px;
 
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 0;
+  }
+
   .header__container {
     padding-top: 28px;
     padding-bottom: 28px;
+  }
+
+  .header__container--mobile {
+    @media (max-width: $mobile-width-only) {
+      padding-top: 23px;
+      padding-bottom: 26px;
+      position: relative;
+    }
+
+    @media (min-width: 426px) {
+      display: none;
+    }
+  }
+}
+
+.header__container--main {
+  @media (max-width: $mobile-width-only) {
+    display: none;
   }
 }
 
@@ -11,4 +33,50 @@
   display: block;
   text-decoration: none;
   margin-right: 19px;
+
+  @media (max-width: $mobile-width-only) {
+    @include transform;
+    position: absolute;
+    margin: 0;
+    display: inline-block;
+  }
+}
+
+.header-mobile__menu-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+}
+
+.header-mobile__button {
+  cursor: pointer;
+  background-color: $basic-background;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 0;
+}
+
+.header-mobile__button--open {
+  background-image: url("../../icons/stack.svg#hamburger-button");
+  background-size: 18px 14px;
+  width: 18px;
+  height: 14px;
+}
+
+.header-mobile__button--close {
+  background-image: url("../../icons/stack.svg#close-button");
+  background-size: 10px 10px;
+  width: 10px;
+  height: 10px;
+}
+
+.header-mobile__list {
+  @include reset;
+}
+
+.header-mobile__logo {
+  display: inline-block;
+  text-decoration: none;
 }

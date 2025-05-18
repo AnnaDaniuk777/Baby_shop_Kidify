@@ -4,6 +4,11 @@
   border: 1px solid $extra-background;
   border-radius: 4px;
   margin-right: 94px;
+
+  @media (max-width: 1440px) {
+    width: 370px;
+    margin-right: auto;
+  }
 }
 
 .total__list {
@@ -32,6 +37,7 @@
 
 .total__name {
   margin: 0;
+  margin-right: 10px;
 }
 
 .total__value {
@@ -39,4 +45,5 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 700;
+  margin-left: 10px;
 }
