@@ -107,7 +107,10 @@
 }
 
 .contacts__wrapper {
+  display: none;
+
   @media (max-width: $mobile-width-only) {
+    display: block;
     padding: 55px 76px 100% 42px;
   }
 }

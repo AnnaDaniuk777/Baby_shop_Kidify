@@ -6,40 +6,49 @@
 
 .card__item {
   display: grid;
-  grid-template-columns: 20px 384px 120px 220px 203px 198px 29px;
-  gap: 34px;
-  padding: 35px 38px 34px 17px;
+  grid-template-columns: 20px 3fr 1fr 178px 2fr 192px 66px;
+  gap: 20px;
+  padding: 35px 22px 34px 14px;
   align-items: center;
 
   &:nth-child(even) {
     background-color: $additional-background;
-  }
 
-  @media (max-width: 1440px) {
-    grid-template-columns: 20px 306px 101px 1fr 152px 1fr 49px;
-    gap: 15px;
+    @media (max-width: $mobile-width-only) {
+      background-color: $basic-background;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    gap: 15px;
-    margin: 0 auto;
-    max-width: 400px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px 15px;
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 2px solid $extra-background;
   }
 }
 
 .card__link {
   display: flex;
-  gap: 20px;
+  gap: 17px;
   text-decoration: none;
   align-items: center;
-  margin-left: -4px;
+  padding-left: 13px;
+
+  @media (max-width: $mobile-width-only) {
+    grid-column: 1 / 3;
+    padding-left: 0;
+  }
 }
 
 .card__img {
   display: block;
+  height: auto;
+
+  @media (max-width: $mobile-width-only) {
+    height: 50%;
+  }
 }
 
 .card__title {
@@ -48,6 +57,16 @@
   line-height: 20px;
   font-weight: 700;
   color: $primary-color;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 13px;
+    line-height: 15px;
+  }
 }
 
 .card__size {
@@ -55,18 +74,45 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
+  padding-left: 6px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    justify-self: end;
+    font-size: 13px;
+    line-height: 15px;
+  }
 }
 
 .card__feature {
   margin: 0;
   color: $secondary-color;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 13px;
+    line-height: 15px;
+  }
 }
 
 .card__button-wrapper {
   display: flex;
-  max-width: 136px;
   border: 1px solid $extra-background;
   border-radius: 4px;
+  justify-content: center;
+  justify-self: center;
+
+  @media (max-width: $tablet-width) {
+    justify-self: center;
+  }
 }
 
 .card__button-input {
@@ -76,6 +122,14 @@
   position: relative;
   background-color: inherit;
   cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    width: 35px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 25px;
+  }
 }
 
 .card__svg-icon {
@@ -97,6 +151,16 @@
   font-weight: 700;
   text-align: center;
   background-color: inherit;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 
 .card__delete-button {
@@ -107,9 +171,27 @@
   padding: 0;
   position: relative;
   cursor: pointer;
+  justify-self: center;
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
 }
 
 .card__subtotal {
   color: $secondary-color;
   margin: 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    text-align: right;
+    font-size: 13px;
+    line-height: 15px;
+  }
 }

@@ -1,14 +1,16 @@
 .main-nav {
-  display: grid;
-  grid-template-columns: 200px 473px 200px;
-  gap: 280px;
+  // display: grid;
+  // grid-template-columns: 200px 473px 200px;
+  // gap: 280px;
   align-items: start;
+  display: flex;
+  justify-content: space-between;
 
-  @media (max-width: 1440px) {
-    display: flex;
-    gap: 0;
-    justify-content: space-between;
-  }
+  // @media (max-width: 1440px) {
+  //   display: flex;
+  //   gap: 0;
+  //   justify-content: space-between;
+  // }
 }
 
 .main-nav--closed {

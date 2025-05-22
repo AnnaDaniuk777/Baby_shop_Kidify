@@ -16,7 +16,7 @@
 
 <body>
   <header class="header">
-    <div class="header__container header__container--mobile container">
+    <!-- <div class="header__container header__container--mobile container">
       <div class="header-mobile__menu-wrapper">
         <button class="header-mobile__button header-mobile__button--open" type="button">
           <span class="visually-hidden">Open menu</span>
@@ -120,9 +120,19 @@
           </ul>
         </div>
       </nav>
-    </div>
-    <div class="header__container header__container--main container">
+    </div> -->
+    <div class="header__container header__container--main header__container--mobile container">
       <nav class="main-nav">
+        <div class="header-mobile__menu-wrapper">
+          <button class="header-mobile__button header-mobile__button--open" type="button">
+            <span class="visually-hidden">Open menu</span>
+          </button>
+          <a class="header__logo logo" href="index.html">
+            <picture>
+              <img class="logo__img" src="../images/logo-icon.svg" width="66" height="23" alt="Kidify logo image">
+            </picture>
+          </a>
+        </div>
         <a class="header__logo logo" href="index.html">
           <picture>
             <img class="logo__img" src="../images/logo-icon.svg" width="107" height="37" alt="Kidify logo image">
@@ -169,7 +179,7 @@
               <span class="visually-hidden">Search</span>
             </a>
           </li>
-          <li class="user-list__item">
+          <li class="user-list__item user-list__item--mobile">
             <a class="user-list__link" href="#">
               <svg class="user-list__icon" width="20" height="20">
                 <use href="icons/stack.svg#login-icon"></use>
@@ -177,7 +187,7 @@
               <span class="visually-hidden">Login</span>
             </a>
           </li>
-          <li class="user-list__item">
+          <li class="user-list__item user-list__item--mobile">
             <a class="user-list__link" href="#">
               <svg class="user-list__icon" width="20" height="20">
                 <use href="icons/stack.svg#favourite-icon"></use>
@@ -196,6 +206,36 @@
             </a>
           </li>
         </ul>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Contact</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">Monday to Friday 8 a.m - 5 p.m</li>
+            <li class="contacts__item contacts__item--main">
+              <a class="contacts__link contacts__link--main" href="tel:+01456789">
+                <svg class="contacts__svg-icon" width="16" height="17">
+                  <use href="icons/stack.svg#footer-phone-icon"></use>
+                </svg>
+                <span class="contacts__text">+01 456 789</span>
+              </a>
+            </li>
+            <li class="contacts__item contacts__item--main">
+              <a class="contacts__link contacts__link--main" href="tel:+01567890">
+                <svg class="contacts__svg-icon" width="16" height="17">
+                  <use href="icons/stack.svg#footer-phone-icon"></use>
+                </svg>
+                <span class="contacts__text">+01 567 890</span>
+              </a>
+            </li>
+            <li class="contacts__item contacts__item--main">
+              <a class="contacts__link contacts__link--main" href="mailto:contact@kidify.com" target="_blank" rel="noreferrer noopener">
+                <svg class="contacts__svg-icon" width="24" height="17">
+                  <use href="icons/stack.svg#footer-email-icon"></use>
+                </svg>
+                <span class="contacts__text">contact@kidify.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -226,7 +266,7 @@
             <li class="cart__features-item">Product</li>
             <li class="cart__features-item">Size</li>
             <li class="cart__features-item">Unit Price</li>
-            <li class="cart__features-item">Quantity</li>
+            <li class="cart__features-item cart__features-item--center">Quantity</li>
             <li class="cart__features-item">Subtotal</li>
             <li class="cart__features-item">Remove</li>
           </ul>
@@ -361,7 +401,7 @@
             </li>
           </ul>
         </div>
-        <form class="cart__discount" action="https://echo.htmlacademy.ru/" method="post">
+        <!-- <form class="cart__discount" action="https://echo.htmlacademy.ru/" method="post">
           <div class="cart__feature-form">
             <div class="cart__shipping-wrapper">
               <div class="cart__discount-wrapper">
@@ -413,7 +453,7 @@
               <button class="cart__update-button button" type="button">Update Cart</button>
             </div>
           </div>
-        </form>
+        </form> -->
       </div>
     </section>
     <section class="cart__slider slider">
@@ -464,7 +504,7 @@
       </ul>
     </section>
   </main>
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="footer-container container">
       <div class="footer__navigation-wrapper contacts">
         <div class="contacts__wrapper">
@@ -593,7 +633,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
 </body>
 

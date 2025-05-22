@@ -1,7 +1,7 @@
 .site-list {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 35px;
+  display: flex;
+  gap: 10px 35px;
+  flex-wrap: wrap;
 
   @media (max-width: $mobile-width-only) {
     display: flex;
