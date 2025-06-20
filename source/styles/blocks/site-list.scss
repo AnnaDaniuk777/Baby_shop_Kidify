@@ -2,6 +2,12 @@
   display: flex;
   gap: 10px 35px;
   flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    order: 2;
+  }
 
   @media (max-width: $mobile-width-only) {
     display: flex;
@@ -16,6 +22,8 @@
 .site-list__item {
   @media (max-width: $mobile-width-only) {
     position: relative;
+    width: 100%;
+    display: block;
   }
 }
 
@@ -24,8 +32,12 @@
   color: $primary-color;
 
   @media (max-width: $mobile-width-only) {
+    display: block;
     font-size: 16px;
     line-height: 24px;
+    width: 100%;
+    text-align: left;
+    padding: 5px 0;
     padding-right: 15px;
   }
 }
@@ -40,7 +52,7 @@
     background-size: 7px 11px;
     width: 7px;
     height: 11px;
-    top: 0;
+    top: 11px;
     right: 0;
   }
 }

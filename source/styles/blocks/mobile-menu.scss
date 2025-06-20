@@ -1,0 +1,11 @@
+.mobile-menu--opened {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+}
+
+.mobile-menu--closed {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}

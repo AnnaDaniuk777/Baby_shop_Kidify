@@ -4,10 +4,18 @@
   border: 1px solid $extra-background;
   border-radius: 4px;
   margin-right: 94px;
+  flex-grow: 2;
 
   @media (max-width: 1440px) {
-    width: 370px;
-    margin-right: auto;
+    width: 27.2%;
+    margin-right: 23px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    min-width: 300px;
+  }
+
+  @media (max-width: 675px) {
+    margin-right: 0;
   }
 }
 
@@ -46,4 +54,5 @@
   line-height: 28px;
   font-weight: 700;
   margin-left: 10px;
+  text-align: right;
 }

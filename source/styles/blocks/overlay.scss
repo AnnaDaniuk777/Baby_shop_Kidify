@@ -1,0 +1,15 @@
+.overlay {
+  background: #1c1d1d;
+  opacity: 0.4;
+  position: absolute;
+  inset: 0;
+  z-index: z("cart-overlay");
+}
+
+.overlay__mobile-menu--closed {
+  display: none;
+}
+
+.overlay__mobile-menu--opened {
+  display: block;
+}

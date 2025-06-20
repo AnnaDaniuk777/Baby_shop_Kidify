@@ -24,6 +24,11 @@
 
 .slider__img {
   display: block;
+
+  @media (max-width: $tablet-width) {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 .slider__link {

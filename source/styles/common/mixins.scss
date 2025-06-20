@@ -30,7 +30,7 @@
 @mixin body-flex {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 @mixin primary-button($font-family, $text-color, $background-color) {
@@ -83,3 +83,18 @@
   width: 100%;
   margin-bottom: 14px;
 }
+
+@function z($name) {
+  @if index($z-indexes, $name) {
+   @return (length($z-indexes) - index($z-indexes, $name)) + 100;
+  } @else {
+   @warn "There is no item "#{$name}" in this list; choose one of: #{$z-indexes}";
+   @return null;
+  }
+}
+
+$z-indexes: (
+  "mobile-menu",
+  "cart-overlay",
+  "header",
+);

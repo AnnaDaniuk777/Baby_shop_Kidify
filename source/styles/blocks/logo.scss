@@ -1,3 +1,8 @@
 .logo__img {
   display: block;
+
+  @media (max-width: $mobile-width-only) {
+    width: 67px;
+    height: 21px;
+  }
 }

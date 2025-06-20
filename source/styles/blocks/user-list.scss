@@ -5,10 +5,11 @@
   flex-wrap: wrap;
 
   @media (max-width: $mobile-width-only) {
-    display: flex;
+    width: auto;
     gap: 5px;
-    margin-right: 17px;
-    margin-left: auto;
+    position: absolute;
+    top: 23px;
+    right: 41px;
   }
 }
 
@@ -49,6 +50,12 @@
 
 .user-list__item--mobile {
   @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.user-list--mobile {
+  @media (min-width: 768px) {
     display: none;
   }
 }
