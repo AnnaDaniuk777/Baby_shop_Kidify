@@ -6,12 +6,12 @@ function initMobileMenu() {
 
   function openMenu() {
     mobileMenu.classList.remove('mobile-menu--closed');
-    overlay.classList.remove('overlay__mobile-menu--closed');
+    overlay.classList.remove('overlay--closed');
   }
 
   function closeMenu() {
     mobileMenu.classList.add('mobile-menu--closed');
-    overlay.classList.add('overlay__mobile-menu--closed');
+    overlay.classList.add('overlay--closed');
   }
 
   burgerButton.addEventListener('click', openMenu);

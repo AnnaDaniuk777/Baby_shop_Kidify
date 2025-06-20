@@ -6,10 +6,10 @@
   z-index: z("cart-overlay");
 }
 
-.overlay__mobile-menu--closed {
+.overlay--closed {
   display: none;
 }
 
-.overlay__mobile-menu--opened {
+.overlay--opened {
   display: block;
 }

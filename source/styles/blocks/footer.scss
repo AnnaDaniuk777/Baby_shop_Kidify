@@ -53,4 +53,9 @@
   @media (max-width: 1440px) {
     margin-right: 0;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width: 67px;
+    height: 21px;
+  }
 }
