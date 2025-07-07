@@ -3,8 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 29px;
-  max-width: 173px;
-  margin: 0 auto;
+  // max-width: 173px;
+  // margin: 0 auto;
+  justify-content: center;
 }
 
 .pagination__item {

@@ -7,11 +7,13 @@ function initMobileMenu() {
   function openMenu() {
     mobileMenu.classList.remove('mobile-menu--closed');
     overlay.classList.remove('overlay--closed');
+    document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     mobileMenu.classList.add('mobile-menu--closed');
     overlay.classList.add('overlay--closed');
+    document.body.style.overflow = '';
   }
 
   burgerButton.addEventListener('click', openMenu);

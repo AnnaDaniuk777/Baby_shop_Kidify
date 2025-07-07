@@ -10,7 +10,8 @@
   gap: 20px;
   padding: 35px 22px 34px 14px;
   align-items: center;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 
   &:nth-child(even) {
     background-color: $additional-background;
