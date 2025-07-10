@@ -1,13 +1,15 @@
+import { updateTotal } from './cart-update-total.js';
+
 function setupQuantityControl() {
-  const quantityWrappers = document.querySelectorAll('.card__button-wrapper');
+  const quantityWrappers = document.querySelectorAll('.card__item');
 
   quantityWrappers.forEach((wrapper) => {
     const input = wrapper.querySelector('.card__input-quantity');
     const decreaseBtn = wrapper.querySelectorAll('.card__button-input')[0];
     const increaseBtn = wrapper.querySelectorAll('.card__button-input')[1];
-    const priceElement = wrapper.querySelectorAll('.card__feature');
-    const subtotalElement = wrapper.querySelectorAll('.card__subtotal');
-    // const cardItem = wrapper.closest('.card__item');
+    const priceElement = wrapper.querySelector('.card__feature');
+    const subtotalElement = wrapper.querySelector('.card__subtotal');
+    const checkbox = wrapper.querySelector('.cart__item-input');
 
     const pricePerUnit = parseFloat(priceElement.textContent.replace('$', ''));
 
@@ -15,6 +17,10 @@ function setupQuantityControl() {
       const quantity = parseInt(input.value, 10);
       const subtotal = (quantity * pricePerUnit).toFixed(2);
       subtotalElement.textContent = `$${subtotal}`;
+
+      if (checkbox.checked) {
+        updateTotal();
+      }
     };
 
     const handleDecrease = () => {
@@ -27,12 +33,12 @@ function setupQuantityControl() {
 
     const handleIncrease = () => {
       let value = parseInt(input.value, 10);
-      input.value = ++ value;
+      input.value = ++value;
       updateSubtotal();
     };
 
     const handleInputChange = () => {
-      if (input.value > parseInt(input.min, 10)) {
+      if (input.value < parseInt(input.min, 10)) {
         input.value = input.min;
       }
       updateSubtotal();
@@ -41,6 +47,14 @@ function setupQuantityControl() {
     decreaseBtn.addEventListener('click', handleDecrease);
     increaseBtn.addEventListener('click', handleIncrease);
     input.addEventListener('change', handleInputChange);
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        updateTotal();
+      } else {
+        updateTotal();
+      }
+    });
   });
 }
 

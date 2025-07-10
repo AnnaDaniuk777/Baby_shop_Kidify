@@ -1,31 +1,12 @@
+import { updateTotal } from './cart-update-total.js';
+
 function setupCartTotal() {
   const checkboxes = document.querySelectorAll('.cart__item-input');
   const checkAllCheckbox = document.querySelector('.cart__features-input[name="check_all"]');
   const updateCartButton = document.querySelector('.cart__update-button');
-  const continueShoppingButton = document.querySelectorAll('.cart__link-button');
-  const subtotalElement = document.closest('.card__item').querySelector('.card__subtotal');
-  const totalValue = document.querySelectorAll('.total__value');
-  let allChecked = true;
-  let total = 0;
+  const continueShoppingButton = document.querySelector('.cart__link-button');
 
-  const updateTotal = () => {
-    checkboxes.forEach((checkbox) => {
-      if (checkbox.checked) {
-        total += parseFloat(subtotalElement.textContent.replace('$', ''));
-      } else {
-        allChecked = false;
-      }
-    });
-
-    totalValue.forEach((element) => {
-      element.textContent = `$${total.toFixed(2)}`;
-    });
-
-    checkAllCheckbox.checked = allChecked;
-    checkAllCheckbox.indeterminate = !allChecked && Array.from(checkboxes).filter((checkbox) => checkbox.checked);
-  };
-
-  const handleSelectAll = (evt) => {
+  const handlerSelectAll = (evt) => {
     const isChecked = evt.target.checked;
     checkboxes.forEach((checkbox) => {
       checkbox.checked = isChecked;
@@ -34,22 +15,25 @@ function setupCartTotal() {
     updateTotal();
   };
 
-  const handleItemCheckboxChange = () => {
+  const handlerItemCheckboxChange = () => {
     updateTotal();
   };
 
-  const handleContinueShopping = () => {
+  const handlerContinueShopping = () => {
     window.location.href = 'catalog.html';
   };
 
   const initEvents = () => {
-    checkAllCheckbox.addEventListener('change', handleSelectAll);
+    if (checkAllCheckbox) {
+      checkAllCheckbox.addEventListener('change', handlerSelectAll);
+    }
+
     checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', handleItemCheckboxChange);
+      checkbox.addEventListener('change', handlerItemCheckboxChange);
     });
 
     if (continueShoppingButton) {
-      updateCartButton.addEventListener('click', handleContinueShopping);
+      updateCartButton.addEventListener('click', handlerContinueShopping);
     }
   };
 
@@ -57,4 +41,24 @@ function setupCartTotal() {
   updateTotal();
 }
 
-export { setupCartTotal };
+function setupUpdateCartButton(updateTotal) {
+  const updateCartButton = document.querySelector('.cart__update-button');
+
+  if (updateCartButton) {
+    updateCartButton.addEventListener('click', () => {
+      const cartItems = document.querySelectorAll('.card__item');
+
+      cartItems.forEach((item) => {
+        const checkbox = item.querySelector('.cart__item-input');
+        if (!checkbox.checked) {
+          item.remove();
+        }
+      });
+
+      updateTotal();
+    });
+  }
+}
+
+
+export { setupCartTotal, setupUpdateCartButton };

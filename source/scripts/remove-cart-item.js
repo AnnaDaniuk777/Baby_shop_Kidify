@@ -1,13 +1,21 @@
+import { updateTotal } from './cart-update-total.js';
+
 function removeCartItem(evt) {
   const cardItem = evt.target.closest('.card__item');
+  const wasChecked = cardItem.querySelector('.cart__item-input').checked;
 
   cardItem.style.transition = 'all 0.3s ease';
   cardItem.style.transform = 'translateX(-50px)';
+  cardItem.style.opacity = '0';
   cardItem.style.overflow = 'hidden';
 
   setTimeout(() => {
     cardItem.remove();
     checkEmptyCart();
+
+    if (wasChecked) {
+      updateTotal();
+    }
   }, 300);
 }
 
@@ -43,6 +51,8 @@ function checkEmptyCart() {
     if (discountForm) {
       discountForm.style.display = 'none';
     }
+
+    updateTotal();
   }
 }
 
@@ -52,6 +62,7 @@ function initCart() {
     button.addEventListener('click', removeCartItem);
   });
 
+  updateTotal();
   checkEmptyCart();
 }
 
