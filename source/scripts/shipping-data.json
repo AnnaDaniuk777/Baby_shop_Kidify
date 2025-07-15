@@ -1,0 +1,39 @@
+{
+  "shippingOptions": [
+    {
+      "country": "USA",
+      "baseRate": 5.0,
+      "minOrderForFreeShipping": 200.0,
+      "additionalFees": 0.0,
+      "displayText": "Standard delivery: 5% (Free over $200)"
+    },
+    {
+      "country": "United Kingdom",
+      "baseRate": 8.0,
+      "minOrderForFreeShipping": 150.0,
+      "additionalFees": 5.0,
+      "displayText": "Express delivery: 8% + £5 (Free over £150)"
+    },
+    {
+      "country": "Australia",
+      "baseRate": 10.0,
+      "minOrderForFreeShipping": 250.0,
+      "additionalFees": 7.0,
+      "displayText": "Standard delivery: 10% + A$7 (Free over A$250)"
+    },
+    {
+      "country": "New Zealand",
+      "baseRate": 12.0,
+      "minOrderForFreeShipping": 200.0,
+      "additionalFees": 10.0,
+      "displayText": "Express delivery: 12% + NZ$10 (Free over NZ$200)"
+    },
+    {
+      "country": "Germany",
+      "baseRate": 7.0,
+      "minOrderForFreeShipping": 180.0,
+      "additionalFees": 3.0,
+      "displayText": "Standard delivery: 7% + €3 (Free over €180)"
+    }
+  ]
+}

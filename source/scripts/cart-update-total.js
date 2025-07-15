@@ -1,9 +1,9 @@
 const subtotalElements = document.querySelectorAll('.card__subtotal');
 const totalValue = document.querySelector('.total__value');
-const checkboxes = document.querySelectorAll('.cart__item-input');
 const checkAllCheckbox = document.querySelector('.cart__features-input[name="check_all"]');
 
 function updateTotal() {
+  const checkboxes = document.querySelectorAll('.cart__item-input');
   let total = 0;
   let allChecked = true;
 

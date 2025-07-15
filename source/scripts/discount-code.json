@@ -1,0 +1,52 @@
+{
+  "discountCodes": [
+    {
+      "code": "WELCOME10",
+      "discountType": "percentage",
+      "value": 10,
+      "description": "10% off your first order",
+      "isActive": true,
+      "minOrderAmount": 0
+    },
+    {
+      "code": "FREESHIP",
+      "discountType": "fixed",
+      "value": 5,
+      "description": "$5 off shipping",
+      "isActive": true,
+      "minOrderAmount": 20
+    },
+    {
+      "code": "SUMMER25",
+      "discountType": "percentage",
+      "value": 25,
+      "description": "25% off summer collection",
+      "isActive": true,
+      "minOrderAmount": 50
+    },
+    {
+      "code": "LOYALTY15",
+      "discountType": "percentage",
+      "value": 15,
+      "description": "15% off for loyal customers",
+      "isActive": true,
+      "minOrderAmount": 30
+    },
+    {
+      "code": "BIGSALE50",
+      "discountType": "percentage",
+      "value": 50,
+      "description": "50% off on selected items",
+      "isActive": false,
+      "minOrderAmount": 100
+    },
+    {
+      "code": "NEWYEAR2025",
+      "discountType": "fixed",
+      "value": 20,
+      "description": "$20 off on orders over $100",
+      "isActive": true,
+      "minOrderAmount": 100
+    }
+  ]
+}

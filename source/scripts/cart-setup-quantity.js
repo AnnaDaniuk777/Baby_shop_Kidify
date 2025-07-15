@@ -1,4 +1,5 @@
 import { updateTotal } from './cart-update-total.js';
+import { initShippingCalculator } from './shipping-calculator.js';
 
 function setupQuantityControl() {
   const quantityWrappers = document.querySelectorAll('.card__item');
@@ -20,10 +21,11 @@ function setupQuantityControl() {
 
       if (checkbox.checked) {
         updateTotal();
+        initShippingCalculator();
       }
     };
 
-    const handleDecrease = () => {
+    const handlerDecrease = () => {
       let value = parseInt(input.value, 10);
       if (value > parseInt(input.min, 10)) {
         input.value = --value;
@@ -31,29 +33,26 @@ function setupQuantityControl() {
       }
     };
 
-    const handleIncrease = () => {
+    const handlerIncrease = () => {
       let value = parseInt(input.value, 10);
       input.value = ++value;
       updateSubtotal();
     };
 
-    const handleInputChange = () => {
+    const handlerInputChange = () => {
       if (input.value < parseInt(input.min, 10)) {
         input.value = input.min;
       }
       updateSubtotal();
     };
 
-    decreaseBtn.addEventListener('click', handleDecrease);
-    increaseBtn.addEventListener('click', handleIncrease);
-    input.addEventListener('change', handleInputChange);
+    decreaseBtn.addEventListener('click', handlerDecrease);
+    increaseBtn.addEventListener('click', handlerIncrease);
+    input.addEventListener('change', handlerInputChange);
 
     checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        updateTotal();
-      } else {
-        updateTotal();
-      }
+      updateTotal();
+      initShippingCalculator();
     });
   });
 }
