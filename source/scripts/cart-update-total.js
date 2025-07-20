@@ -1,5 +1,6 @@
-const subtotalElements = document.querySelectorAll('.card__subtotal');
-const totalValue = document.querySelector('.total__value');
+const subtotalElement = document.querySelector('[data-cart="subtotal"] .total__value');
+const shippingElement = document.querySelector('[data-cart="shipping"] .total__value');
+const totalElement = document.querySelector('[data-cart="total"] .total__value');
 const checkAllCheckbox = document.querySelector('.cart__features-input[name="check_all"]');
 
 function updateTotal() {
@@ -16,8 +17,11 @@ function updateTotal() {
     }
   });
 
-  subtotalElements.textContent = `$${total.toFixed(2)}`;
-  totalValue.textContent = `$${total.toFixed(2)}`;
+  subtotalElement.textContent = `$${total.toFixed(2)}`;
+
+  const shippingCostText = shippingElement.textContent;
+  const shippingCost = shippingCostText === 'Free' ? 0 : parseFloat(shippingCostText.replace('$', ''));
+  totalElement.textContent = `$${(total + shippingCost).toFixed(2)}`;
 
   checkAllCheckbox.checked = allChecked;
 }

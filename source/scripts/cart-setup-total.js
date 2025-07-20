@@ -1,4 +1,5 @@
 import { updateTotal } from './cart-update-total.js';
+import { updateCartTotal } from './cart-icon-quantity-update.js';
 
 function setupCartTotal() {
   const checkboxes = document.querySelectorAll('.cart__item-input');
@@ -11,10 +12,12 @@ function setupCartTotal() {
     });
 
     updateTotal();
+    updateCartTotal();
   };
 
   const handlerItemCheckboxChange = () => {
     updateTotal();
+    updateCartTotal();
   };
 
   const initEvents = () => {

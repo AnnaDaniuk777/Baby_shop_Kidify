@@ -2,20 +2,24 @@ async function initShippingCalculator() {
   try {
     const countrySelect = document.querySelector('.shipping__select');
     const shippingText = document.querySelector('.shipping__text');
-    const subtotalElement = document.querySelector('.total__value:first-child');
-    const shippingElement = document.querySelector('.total__item:nth-child(2) .total__value');
-    const totalElement = document.querySelector('.total__item:last-child .total__value');
-    const estimateCountryElement = document.querySelector('.total__item:nth-child(3) .total__value');
+    const subtotalElement = document.querySelector('[data-cart="subtotal"] .total__value');
+    const shippingElement = document.querySelector('[data-cart="shipping"] .total__value');
+    const totalElement = document.querySelector('[data-cart="total"] .total__value');
+    const estimateCountryElement = document.querySelector('[data-cart="country"] .total__value');
 
-    const response = await fetch('./shipping-data.json');
+    const response = await fetch('./scripts/shipping-data.json');
     const data = await response.json();
+
+    estimateCountryElement.textContent = countrySelect.value;
 
     const updateShipping = () => {
       const selectedCountry = countrySelect.value;
       const option = data.shippingOptions.find((opt) => opt.country === selectedCountry);
-      shippingText.textContent = option?.displayText || 'Flat rate: 5%';
 
-      const subtotal = parseFloat(subtotalElement.textContent.replace('$', '')) || 0;
+      estimateCountryElement.textContent = selectedCountry;
+      shippingText.textContent = option ? option.displayText : 'Flat rate: 5%';
+
+      const subtotal = parseFloat(subtotalElement.textContent.replace('$', ''));
       let shippingCost = 0;
       let shippingTextContent = 'Free';
 
@@ -23,7 +27,7 @@ async function initShippingCalculator() {
         estimateCountryElement.textContent = selectedCountry;
         if (subtotal < option.minOrderForFreeShipping) {
           shippingCost = (subtotal * option.baseRate / 100) + option.additionalFees;
-          shippingTextContent = `$${ shippingCost.toFixed(2) }`;
+          shippingTextContent = `$${shippingCost.toFixed(2)}`;
         }
 
         shippingText.textContent = option.displayText || `Flat rate: ${option.baseRate}%`;
@@ -35,6 +39,7 @@ async function initShippingCalculator() {
     };
 
     countrySelect.addEventListener('change', updateShipping);
+    updateShipping();
 
   } catch (error) {
     console.log('Error loading shipping data:', error);

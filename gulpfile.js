@@ -29,6 +29,8 @@ const PATHS_TO_STATIC = [
   `${PATH_TO_SOURCE}vendor/**/*`,
   `${PATH_TO_SOURCE}images/**/*`,
   `!${PATH_TO_SOURCE}**/README.md`,
+  `${PATH_TO_SOURCE}scripts/shipping-data.json`,
+  `${PATH_TO_SOURCE}scripts/discount-data.json`,
 ];
 let isDevelopment = true;
 
@@ -155,7 +157,7 @@ export function startServer () {
     ui: false,
   }, (err, bs) => {
     bs.addMiddleware('*', (req, res) => {
-      res.write(readFileSync(`${PATH_TO_DIST}404.html`));
+      // res.write(readFileSync(`${PATH_TO_DIST}404.html`));
       res.end();
     });
   });

@@ -1,5 +1,6 @@
 import { updateTotal } from './cart-update-total.js';
 import { initShippingCalculator } from './shipping-calculator.js';
+import { updateCartTotal } from './cart-icon-quantity-update.js';
 
 function setupQuantityControl() {
   const quantityWrappers = document.querySelectorAll('.card__item');
@@ -44,6 +45,7 @@ function setupQuantityControl() {
         input.value = input.min;
       }
       updateSubtotal();
+      updateCartTotal();
     };
 
     decreaseBtn.addEventListener('click', handlerDecrease);

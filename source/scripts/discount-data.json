@@ -14,7 +14,7 @@
       "value": 5,
       "description": "$5 off shipping",
       "isActive": true,
-      "minOrderAmount": 20
+      "minOrderAmount": 2
     },
     {
       "code": "SUMMER25",
@@ -22,7 +22,7 @@
       "value": 25,
       "description": "25% off summer collection",
       "isActive": true,
-      "minOrderAmount": 50
+      "minOrderAmount": 3
     },
     {
       "code": "LOYALTY15",
@@ -30,7 +30,7 @@
       "value": 15,
       "description": "15% off for loyal customers",
       "isActive": true,
-      "minOrderAmount": 30
+      "minOrderAmount": 3
     },
     {
       "code": "BIGSALE50",
@@ -38,7 +38,7 @@
       "value": 50,
       "description": "50% off on selected items",
       "isActive": false,
-      "minOrderAmount": 100
+      "minOrderAmount": 5
     },
     {
       "code": "NEWYEAR2025",
@@ -46,7 +46,7 @@
       "value": 20,
       "description": "$20 off on orders over $100",
       "isActive": true,
-      "minOrderAmount": 100
+      "minOrderAmount": 5
     }
   ]
 }
