@@ -1,6 +1,6 @@
 import { updateTotal } from './cart-update-total.js';
 import { initShippingCalculator } from './shipping-calculator.js';
-import { updateCartTotal } from './cart-icon-quantity-update.js';
+import { updateCartCounter } from './cart-icon-quantity-update.js';
 
 function setupQuantityControl() {
   const quantityWrappers = document.querySelectorAll('.card__item');
@@ -31,6 +31,7 @@ function setupQuantityControl() {
       if (value > parseInt(input.min, 10)) {
         input.value = --value;
         updateSubtotal();
+        updateCartCounter();
       }
     };
 
@@ -38,6 +39,7 @@ function setupQuantityControl() {
       let value = parseInt(input.value, 10);
       input.value = ++value;
       updateSubtotal();
+      updateCartCounter();
     };
 
     const handlerInputChange = () => {
@@ -45,7 +47,7 @@ function setupQuantityControl() {
         input.value = input.min;
       }
       updateSubtotal();
-      updateCartTotal();
+      updateCartCounter();
     };
 
     decreaseBtn.addEventListener('click', handlerDecrease);

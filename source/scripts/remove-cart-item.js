@@ -4,10 +4,10 @@ function removeCartItem(evt) {
   const cardItem = evt.target.closest('.card__item');
   const wasChecked = cardItem.querySelector('.cart__item-input').checked;
 
-  // cardItem.style.transition = 'all 0.3s ease';
-  // cardItem.style.transform = 'translateX(-50px)';
-  // cardItem.style.opacity = '0';
-  // cardItem.style.overflow = 'hidden';
+  cardItem.style.transition = 'all 0.3s ease';
+  cardItem.style.transform = 'translateX(-50px)';
+  cardItem.style.opacity = '0';
+  cardItem.style.overflow = 'hidden';
 
   setTimeout(() => {
     cardItem.remove();

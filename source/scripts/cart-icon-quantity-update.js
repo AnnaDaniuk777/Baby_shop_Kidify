@@ -1,21 +1,21 @@
-const quantityInputs = document.querySelectorAll('.card__input-quantity');
-const cartCounter = document.querySelector('[data-cart="cart-quantity"]');
-
-function updateCartTotal() {
+function updateCartCounter() {
+  const cartItems = document.querySelectorAll('.card__item');
+  const cartCounter = document.querySelector('[data-cart="cart-quantity"]');
   let totalQuantity = 0;
 
-  quantityInputs.forEach((input) => {
-    const cardItem = input.closest('.card__item');
-    const checkbox = cardItem.querySelector('.cart__item-input');
-    if (checkbox.checked) {
-      totalQuantity += parseInt(input.value, 10);
+  cartItems.forEach((item) => {
+    const quantityInput = item.querySelector('.card__input-quantity');
+    if (quantityInput) {
+      totalQuantity += parseInt(quantityInput.value, 10);
     }
   });
 
-  cartCounter.textContent = totalQuantity;
-  console.log(totalQuantity);
+  if (cartCounter) {
+    cartCounter.textContent = totalQuantity;
+  }
 
   return totalQuantity;
 }
 
-export { updateCartTotal };
+export { updateCartCounter };
+
