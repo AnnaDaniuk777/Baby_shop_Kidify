@@ -1,8 +1,7 @@
 import { updateTotal } from './cart-update-total.js';
-import { initShippingCalculator } from './shipping-calculator.js';
 import { updateCartCounter } from './cart-icon-quantity-update.js';
 
-function setupQuantityControl() {
+function setupQuantityControl(shippingData, discountData) {
   const quantityWrappers = document.querySelectorAll('.card__item');
 
   quantityWrappers.forEach((wrapper) => {
@@ -21,8 +20,7 @@ function setupQuantityControl() {
       subtotalElement.textContent = `$${subtotal}`;
 
       if (checkbox.checked) {
-        updateTotal();
-        initShippingCalculator();
+        updateTotal(shippingData, discountData);
       }
     };
 
@@ -55,8 +53,7 @@ function setupQuantityControl() {
     input.addEventListener('change', handlerInputChange);
 
     checkbox.addEventListener('change', () => {
-      updateTotal();
-      initShippingCalculator();
+      updateTotal(shippingData, discountData);
     });
   });
 }

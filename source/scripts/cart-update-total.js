@@ -1,9 +1,12 @@
+import { initShippingCalculator } from './shipping-calculator.js';
+import { initDiscountCalculator } from './discount-calculator.js';
+
 const subtotalElement = document.querySelector('[data-cart="subtotal"] .total__value');
 const shippingElement = document.querySelector('[data-cart="shipping"] .total__value');
 const totalElement = document.querySelector('[data-cart="total"] .total__value');
 const checkAllCheckbox = document.querySelector('.cart__features-input[name="check_all"]');
 
-function updateTotal() {
+function updateTotal(shippingData, discountData) {
   const checkboxes = document.querySelectorAll('.cart__item-input');
   let total = 0;
   let allChecked = true;
@@ -24,6 +27,9 @@ function updateTotal() {
   totalElement.textContent = `$${(total + shippingCost).toFixed(2)}`;
 
   checkAllCheckbox.checked = allChecked;
+
+  initShippingCalculator(shippingData);
+  initDiscountCalculator(discountData);
 }
 
 export { updateTotal };

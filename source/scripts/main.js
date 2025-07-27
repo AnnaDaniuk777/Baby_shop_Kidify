@@ -3,32 +3,30 @@ import { initMobileMenu } from './mobile-menu.js';
 import { initCart } from './remove-cart-item.js';
 import { setupQuantityControl } from './cart-setup-quantity.js';
 import { setupCartTotal, setupUpdateCartButton } from './cart-setup-total.js';
-import { initShippingCalculator } from './shipping-calculator.js';
-import { initDiscountCalculator } from './discount-calculator.js';
 import { updateCartCounter } from './cart-icon-quantity-update.js';
 import { getShippingData, getDiscountData } from './get-data.js';
+import { updateTotal } from './cart-update-total.js';
 
-const initApp = async () => {
+async function getData() {
   try {
-    initContactsToggle();
-    initMobileMenu();
-    initCart();
-    setupQuantityControl();
-    setupCartTotal();
-    setupUpdateCartButton();
-    updateCartCounter();
-
     const [shippingData, discountData] = await Promise.all([
       getShippingData(),
       getDiscountData()
     ]);
+    console.log([shippingData, discountData]);
 
-    initShippingCalculator(shippingData);
-    initDiscountCalculator(discountData);
+    updateTotal(shippingData, discountData);
+    initCart(shippingData, discountData);
+    setupQuantityControl(shippingData, discountData);
+    setupCartTotal(shippingData, discountData);
+    setupUpdateCartButton(shippingData, discountData);
 
   } catch (error) {
     console.log('Error initializing app:', error);
   }
-};
+}
 
-initApp();
+getData();
+initContactsToggle();
+initMobileMenu();
+updateCartCounter();

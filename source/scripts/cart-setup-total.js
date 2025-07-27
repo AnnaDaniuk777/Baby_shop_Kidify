@@ -1,7 +1,7 @@
 import { updateTotal } from './cart-update-total.js';
 import { updateCartCounter } from './cart-icon-quantity-update.js';
 
-function setupCartTotal() {
+function setupCartTotal(shippingData, discountData) {
   const checkboxes = document.querySelectorAll('.cart__item-input');
   const checkAllCheckbox = document.querySelector('.cart__features-input[name="check_all"]');
 
@@ -11,12 +11,12 @@ function setupCartTotal() {
       checkbox.checked = isChecked;
     });
 
-    updateTotal();
+    updateTotal(shippingData, discountData);
     updateCartCounter();
   };
 
   const handlerItemCheckboxChange = () => {
-    updateTotal();
+    updateTotal(shippingData, discountData);
     updateCartCounter();
   };
 
@@ -31,10 +31,10 @@ function setupCartTotal() {
   };
 
   initEvents();
-  updateTotal();
+  updateTotal(shippingData, discountData);
 }
 
-function setupUpdateCartButton(updateTotal) {
+function setupUpdateCartButton(shippingData, discountData) {
   const updateCartButton = document.querySelector('.cart__update-button');
 
   if (updateCartButton) {
@@ -48,7 +48,7 @@ function setupUpdateCartButton(updateTotal) {
         }
       });
 
-      updateTotal();
+      updateTotal(shippingData, discountData);
     });
   }
 }

@@ -1,6 +1,7 @@
 import { updateTotal } from './cart-update-total.js';
+import { updateCartCounter } from './cart-icon-quantity-update.js';
 
-function removeCartItem(evt) {
+function removeCartItem(evt, shippingData, discountData) {
   const cardItem = evt.target.closest('.card__item');
   const wasChecked = cardItem.querySelector('.cart__item-input').checked;
 
@@ -11,15 +12,16 @@ function removeCartItem(evt) {
 
   setTimeout(() => {
     cardItem.remove();
-    checkEmptyCart();
+    checkEmptyCart(shippingData, discountData);
+    updateCartCounter();
 
     if (wasChecked) {
-      updateTotal();
+      updateTotal(shippingData, discountData);
     }
   }, 300);
 }
 
-function checkEmptyCart() {
+function checkEmptyCart(shippingData, discountData) {
   const cartContainer = document.querySelector('.cart__card');
   const cartItems = document.querySelectorAll('.card__item');
   const discountForm = document.querySelector('.cart__discount');
@@ -52,14 +54,16 @@ function checkEmptyCart() {
       discountForm.style.display = 'none';
     }
 
-    updateTotal();
+    updateTotal(shippingData, discountData);
   }
 }
 
-function initCart() {
+function initCart(shippingData, discountData) {
   const deleteButtons = document.querySelectorAll('.card__delete-button');
   deleteButtons.forEach((button) => {
-    button.addEventListener('click', removeCartItem);
+    button.addEventListener('click', (evt) => {
+      removeCartItem(evt, shippingData, discountData);
+    });
   });
 }
 

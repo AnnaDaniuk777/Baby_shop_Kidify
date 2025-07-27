@@ -23,7 +23,6 @@ function initDiscountCalculator (discountData) {
       }
 
       subtotalElement.textContent = `$${Math.max(discountedAmount, 0).toFixed(2)}`;
-      alert(`Discount applied: ${discount.description}`);
     } else {
       alert('Invalid or expired discount code');
     }

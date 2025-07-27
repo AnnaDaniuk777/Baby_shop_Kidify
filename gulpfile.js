@@ -1,4 +1,4 @@
-import { readFileSync, rmSync } from 'node:fs';
+import { rmSync } from 'node:fs';
 
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
