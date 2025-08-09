@@ -1,5 +1,5 @@
-import { initShippingCalculator } from './shipping-calculator.js';
-import { initDiscountCalculator } from './discount-calculator.js';
+import { updateShipping } from './shipping-calculator.js';
+import { calculateDiscount } from './discount-calculator.js';
 
 const subtotalElement = document.querySelector('[data-cart="subtotal"] .total__value');
 const shippingElement = document.querySelector('[data-cart="shipping"] .total__value');
@@ -28,8 +28,11 @@ function updateTotal(shippingData, discountData) {
 
   checkAllCheckbox.checked = allChecked;
 
-  initShippingCalculator(shippingData);
-  initDiscountCalculator(discountData);
+  updateShipping(shippingData);
+  if (document.querySelector('.cart__discount-input').value !== '') {
+    calculateDiscount(discountData);
+    console.log(document.querySelector('.cart__discount-input').value);
+  }
 }
 
 export { updateTotal };

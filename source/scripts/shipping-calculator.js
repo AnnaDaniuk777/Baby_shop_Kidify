@@ -5,11 +5,9 @@ const shippingElement = document.querySelector('[data-cart="shipping"] .total__v
 const totalElement = document.querySelector('[data-cart="total"] .total__value');
 const estimateCountryElement = document.querySelector('[data-cart="country"] .total__value');
 
-let currentShippingData = null;
-
-export function updateShipping() {
+export function updateShipping(data) {
   const selectedCountry = countrySelect.value;
-  const option = currentShippingData.shippingOptions.find((opt) => opt.country === selectedCountry);
+  const option = data.shippingOptions.find((opt) => opt.country === selectedCountry);
 
   estimateCountryElement.textContent = selectedCountry;
 
@@ -33,10 +31,9 @@ export function updateShipping() {
 }
 
 export function initShippingCalculator(shippingData) {
-  currentShippingData = shippingData;
   estimateCountryElement.textContent = countrySelect.value;
-  countrySelect.addEventListener('change', updateShipping);
-  updateShipping();
+  countrySelect.addEventListener('change', () => updateShipping(shippingData));
+  updateShipping(shippingData);
 
   return updateShipping;
 }
