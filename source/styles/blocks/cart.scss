@@ -98,6 +98,40 @@
   display: grid;
   grid-template-columns: auto 115px;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.cart__remove-button {
+  position: absolute;
+  right: 125px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: $primary-color;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s;
+  z-index: 2;
+
+  &::after {
+    @include pseudo;
+    width: 10px;
+    height: 10px;
+    mask-image: url("../../icons/stack.svg#delete-button-icon");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $secondary-color;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &:hover::after {
+    background-color: $primary-color;
+  }
 }
 
 .cart__discount-input {
@@ -105,15 +139,29 @@
   font-family: $font-primary;
   font-size: 16px;
   line-height: 16px;
-  padding: 10px 19px;
+  padding: 10px 40px 10px 19px;
   border: 1px solid $extra-background;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+
+  &:disabled {
+    background-color: #f5f5f5;
+    color: #333333;
+  }
+}
+
+.cart__discount-input:disabled + .cart__remove-button::after {
+  opacity: 1;
 }
 
 .cart__form-button {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
 }
 
 .cart__buttons-wrapper {
@@ -121,6 +169,10 @@
 
   @media (max-width: 1440px) {
     flex-shrink: 2;
+  }
+
+  @media (max-width: 672px) {
+    align-items: center;
   }
 }
 
@@ -205,7 +257,7 @@
   }
 }
 
-.cart__features-input[type="checkbox"]:checked + .cart__features-control::before {
+.cart__features-input[type="checkbox"]:checked+.cart__features-control::before {
   background-color: #967AA1;
   border-color: #967AA1;
 }

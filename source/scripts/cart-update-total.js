@@ -8,6 +8,7 @@ const checkAllCheckbox = document.querySelector('.cart__features-input[name="che
 
 function updateTotal(shippingData, discountData) {
   const checkboxes = document.querySelectorAll('.cart__item-input');
+  const discountInput = document.querySelector('.cart__discount-input');
   let total = 0;
   let allChecked = true;
 
@@ -24,15 +25,16 @@ function updateTotal(shippingData, discountData) {
 
   const shippingCostText = shippingElement.textContent;
   const shippingCost = shippingCostText === 'Free' ? 0 : parseFloat(shippingCostText.replace('$', ''));
-  totalElement.textContent = `$${(total + shippingCost).toFixed(2)}`;
+
+  if (discountInput.disabled && discountInput.value) {
+    calculateDiscount(discountData, discountInput.value, total, shippingCostText);
+  } else {
+    totalElement.textContent = `$${(total + shippingCost).toFixed(2)}`;
+  }
 
   checkAllCheckbox.checked = allChecked;
 
   updateShipping(shippingData);
-  if (document.querySelector('.cart__discount-input').value !== '') {
-    calculateDiscount(discountData);
-    console.log(document.querySelector('.cart__discount-input').value);
-  }
 }
 
 export { updateTotal };

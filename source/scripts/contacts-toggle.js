@@ -2,8 +2,9 @@ function initContactsToggle() {
   const contactsTitles = document.querySelectorAll('.contacts__title');
 
   contactsTitles.forEach((title) => {
-    title.classList.add('contacts__title--toggle');
     const list = title.nextElementSibling;
+
+    title.classList.add('contacts__title--toggle');
     list.classList.add('contacts__list--collapse');
 
     title.addEventListener('click', () => {

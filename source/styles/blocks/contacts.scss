@@ -1,13 +1,17 @@
 .contacts {
   display: grid;
-  grid-template-columns: 262px 151px 161px 129px 112px;
-  gap: 147px;
+  grid-template-columns: 262px 151px 170px 141px 120px;
+  gap: 135px;
 
   @media (max-width: 1440px) {
     display: flex;
     gap: 0;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  @media (max-width: 855px) {
+    gap: 10px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -134,24 +138,42 @@
 .contacts__title--toggle {
   cursor: pointer;
   position: relative;
-  padding-right: 20px;
+  padding-right: 25px;
   display: inline-block;
+
+  &::after {
+    @include pseudo;
+    width: 10px;
+    height: 15px;
+    mask-image: url("../../icons/stack.svg#pagination-arrow");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $secondary-color;
+    right: 3px;
+    top: 48%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+
+    @media (max-width: $mobile-width-only) {
+      top: 10px;
+    }
+  }
 
   @media (max-width: $mobile-width-only) {
     display: block;
   }
 }
 
-.contacts__title--toggle::after {
-  content: "+";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+.contacts__title--active {
+  &::after {
+    transform: translateY(-50%) rotate(90deg);
+    right: 5px;
+    top: 49%;
 
-.contacts__title--active::after {
-  content: "-";
+    @media (max-width: $mobile-width-only) {
+      top: 8px;
+    }
+  }
 }
 
 .contacts__list--collapse {

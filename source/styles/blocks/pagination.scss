@@ -29,8 +29,25 @@
   line-height: 24px;
   color: $secondary-color;
   display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--active {
     color: #808385;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }
