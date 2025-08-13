@@ -53,7 +53,7 @@ export const initDiscountCalculator = (discountData) => {
 
   const removeButton = document.createElement('button');
   removeButton.classList.add('cart__remove-button');
-  applyButton.after(removeButton);
+  applyButton.before(removeButton);
 
   applyButton.addEventListener('click', (evt) => {
     evt.preventDefault();

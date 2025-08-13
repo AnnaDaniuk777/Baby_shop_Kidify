@@ -112,8 +112,6 @@
   cursor: pointer;
   font-size: 14px;
   padding: 5px 10px;
-  opacity: 0;
-  visibility: hidden;
   transition: opacity 0.5s;
   z-index: 2;
 
@@ -127,6 +125,8 @@
     background-color: $secondary-color;
     opacity: 0;
     transition: opacity 0.5s;
+    top: 0;
+    right: 0;
   }
 
   &:hover::after {
@@ -257,14 +257,14 @@
   }
 }
 
-.cart__features-input[type="checkbox"]:checked+.cart__features-control::before {
-  background-color: #967AA1;
-  border-color: #967AA1;
+.cart__features-input[type="checkbox"]:checked + .cart__features-control::before {
+  background-color: #967aa1;
+  border-color: #967aa1;
 }
 
 .cart__control:has(.cart__input[type="checkbox"]:checked)::before {
   background-color: $secondary-color;
-  border-color: #967AA1;
+  border-color: #967aa1;
 }
 
 .cart__control:has(.cart__input[type="checkbox"]:checked)::after {
@@ -291,7 +291,7 @@
     width: 16px;
     height: 16px;
     top: 16px;
-    right: 15px;
+    right: 11px;
   }
 }
 
