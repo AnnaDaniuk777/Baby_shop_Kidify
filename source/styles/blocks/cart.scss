@@ -101,6 +101,27 @@
   position: relative;
 }
 
+.cart__discount-notification {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: $additional-background;
+  color: #c62828;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+
+.cart__discount-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .cart__remove-button {
   position: absolute;
   right: 125px;

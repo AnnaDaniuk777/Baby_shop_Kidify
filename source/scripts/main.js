@@ -1,5 +1,5 @@
 import { initContactsToggle } from './contacts-toggle.js';
-import { initMobileMenu } from './mobile-menu.js';
+import { initMobileMenu, initModals } from './mobile-menu.js';
 import { initCart } from './remove-cart-item.js';
 import { setupQuantityControl } from './cart-setup-quantity.js';
 import { setupCartTotal, setupUpdateCartButton } from './cart-setup-total.js';
@@ -31,4 +31,5 @@ async function getData() {
 getData();
 initContactsToggle();
 initMobileMenu();
+initModals();
 updateCartCounter();

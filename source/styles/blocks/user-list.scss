@@ -44,17 +44,12 @@
   color: $basic-background;
   border-radius: 50%;
   background-color: $secondary-color;
-  padding: 1px 8px;
+  padding: 2px 9px;
   display: inline-block;
   position: absolute;
   top: -16px;
   right: -21px;
-
-  @media (max-width: $mobile-width-only) {
-    padding: 0;
-    width: 24px;
-    height: 24px;
-  }
+  min-width: 29px;
 }
 
 .user-list__item--mobile {

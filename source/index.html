@@ -20,7 +20,7 @@
       <nav class="main-nav header-mobile">
         <div class="header-mobile__menu-wrapper">
           <button class="header-mobile__burger" type="button">
-            <span class="visually-hidden">Open menu</span>
+            <span class="visually-hidden">Close menu</span>
           </button>
           <a class="header__logo logo" href="index.html">
             <img class="logo__img" src="./images/logo-icon.svg" width="107" height="37" alt="Kidify logo image">
@@ -308,6 +308,7 @@
                 <label class="visually-hidden" for="discount">Discount Code</label>
                 <input class="cart__discount-input" id="discount" name="discount" type="text" placeholder="Discount Code">
                 <button class="cart__form-button button" type="submit">Apply</button>
+                <div class="cart__discount-notification"></div>
               </div>
               <div class="cart__shipping-details shipping">
                 <h2 class="shipping__title">Calculate Shipping</h2>
@@ -522,7 +523,8 @@
       </div>
     </div>
   </footer>
-  <div class="overlay overlay--closed"></div>
+  <div class="overlay overlay--menu overlay--closed"></div>
+  <div class="overlay overlay--modal overlay--closed"></div>
   <script type="module" src="./scripts/main.js"></script>
 </body>
 

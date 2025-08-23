@@ -38,11 +38,10 @@
   z-index: 2;
   color: inherit;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   width: 283px;
-  height: 49px;
   background-color: $basic-background;
   transition: opacity 0.5s ease-in-out;
 
@@ -60,13 +59,9 @@
   font-size: 16px;
   line-height: 28px;
   font-weight: 700;
-  margin: 0;
-  padding: 0;
 }
 
 .slider__brand {
   font-size: 14px;
   line-height: 21px;
-  margin: 0;
-  padding: 0;
 }

@@ -4,8 +4,8 @@
       "country": "USA",
       "baseRate": 5.0,
       "minOrderForFreeShipping": 200.0,
-      "additionalFees": 0.0,
-      "displayText": "Standard delivery: 5% (Free over $200)"
+      "additionalFees": 5.0,
+      "displayText": "Standard delivery: 5% + $5 (Free over $200)"
     },
     {
       "country": "United Kingdom",

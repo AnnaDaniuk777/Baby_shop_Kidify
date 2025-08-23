@@ -4,12 +4,12 @@
   gap: 135px;
 
   @media (max-width: 1440px) {
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 90px;
   }
 
   @media (max-width: 1300px) {
-    gap: 22px;
+    gap: 40px;
   }
 
   @media (max-width: 855px) {
@@ -90,7 +90,7 @@
   background-size: 6px 10px;
   width: 6px;
   height: 10px;
-  top: 25%;
+  top: 8px;
   left: 0;
 }
 
